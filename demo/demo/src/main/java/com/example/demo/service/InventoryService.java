@@ -41,10 +41,10 @@ public class InventoryService {
         return repository.findAll();
     }
 
-    public BigDecimal calculateDepreciatedValue(Inventory asset) {
+    /*public BigDecimal calculateDepreciatedValue(Inventory asset) {
         long years = Period.between(asset.getPurchaseDate(), LocalDate.now()).getYears();
         BigDecimal rate = BigDecimal.valueOf(1 - asset.getAnnualExpRate() / 100.0);
         return asset.getPurchaseValue().multiply(rate.pow((int) years));
-    }
+    }*/
 
 }
